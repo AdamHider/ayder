@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--> 
+<html>
+    <head>
+        <title>Мой первый квест</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+
+            function function1() {
+                element.getElementById(result).innerHTML("Поздравлям, Вы выиграли");
+            }
+
+            function function2() {
+                alert("Вы приехали, но вас поджидала люська и раскрошила вам ебальник");
+            }
+            function changeColor("newColor") {
+                var x; 
+                        x = document;
+               x.write = "newColor";
+            }
+
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <div>Куда бы вы хотели отправиться?</div>
+        <button type="button" id="button1"
+                onclick="function1()">В Бахчисарай</button>
+        <button type="button" id="button2"
+                onclick="function2()">В Фурмановку</button>
+        <br/>
+        <div id="result">Результат</div>
+        <button type="button" onclick="changeColor('blue');">Blue</button>
+        <button type="button" onclick="changeColor('red');">Red</button>
+
+    </body>
+</html>
