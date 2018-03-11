@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Practice 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+
+            function fact(f) {
+                var y = 1;
+                for (var i = 1; i <= f; i++) {
+                    y = y * i;
+                    
+                }
+                return y;
+            }
+            function  pow(b, p){
+                var y = 1;
+                for (var i=1; i<=p; i++){
+                    y *= b;
+                }
+                return y;
+            }
+      
+            function mem(x,m){
+                var y = pow(x,m) / fact(m);
+                return y;
+            }
+            function rad(x){
+                return Math.PI * x/180;
+            }
+            
+            function sin(x){
+                var r = rad(x);
+                var y=0;
+                for (var i = 1; i <1000; i+=4){
+                    y += mem(r,i);
+                    y -= mem(r,i+2);
+                }
+                return y;
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <div id="num"></div>
+
+    </body>
+</html>

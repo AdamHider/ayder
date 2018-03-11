@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first quest</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css"></style>
+        <script src="quest.js"></script>
+        <link href="quest.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="topInterval"></div>
+        <div>Выберите один вариант ответа:</div>
+        <div id="question">...</div>
+        <div id="midlleInterval"></div>
+        <div id="buttons">
+            <button type="button" id="yes" 
+                    onclick="yesAnswer()">Да</button>
+            <button type="button" id="no" 
+                    onclick="noAnswer()">Нет</button>
+
+        </div>
+        <div id="topInterval"></div>
+        <div id="result"></div>
+        <div></div>
+        <div>
+            <button type="button" id="again" 
+                    onclick="again()">Начать заново</button>
+
+        </div>
+    </body>
+</html>

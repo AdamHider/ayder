@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Strings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function init() {
+                drawYear();
+            }
+
+            function drawYear() {
+                var y="";
+                for (var i = 1; i <= 12; i++) {
+                    y += i+drawMonth(i);
+                }
+                document.getElementById("table").innerHTML = y;
+            }
+
+
+
+
+            var day = 0;
+            function drawMonth(m) {
+                var firstDay = new Date(2018, m - 1, 1);
+                var lastDay = new Date(2018, m, 0);
+                var f = firstDay.getDay();
+                last = lastDay.getDate();
+                day = -f + 1;
+                console.log(day);
+                return calendar();
+
+            }
+            function calendar() {
+                var table = "<table>";
+                for (var i = 0; i <= 5; i++) {
+                    table += "<tr>";
+                    for (var k = 1; k <= 7; k++) {
+                        day++;
+                        if (day <= 0 || day > last) {
+                            table += "<td></td>";
+                        } else {
+                            table += "<td>" + day + "</td>";
+                        }
+                    }
+                    table += "</tr>";
+                }
+                table += "</table>";
+
+                return table;
+            }
+
+        </script>
+        <style>
+
+            td {
+                border-style:solid;
+                border-radius: 2px;
+                width: 30px;
+                height: 30px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+
+        </style>
+    </head>
+    <body onload = "init()">
+        <div id="table"></div>
+    </body>
+</html>
