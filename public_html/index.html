@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css"></style>
+        <script>
+
+
+            var question;
+            var texttype;
+            var next_round = true;
+            var round = [1, 2, 3, 4];
+            var yes;
+            var no;
+
+            function init() {
+                document.getElementById("question").innerHTML = "К тебе подходит незнакомый мужик и просит занять сотку на дорогу Ты дашь ему денег?";
+            }
+
+
+        </script>
+        <style>
+
+            div {
+                text-align: center;
+                
+            }
+            button{
+                height: 50px;
+                width: 50px;
+                background-color: lightgreen;
+                border-style: dashed; 
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div>Это мой первый квест</div>
+        <div id="question">...</div>
+        <div>
+            <button type="button" >Да</button>
+            <button type="button" >Нет</button>
+            <script>
+                init();
+            </script>
+        </div>
+    </body>
+</html>
